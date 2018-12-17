@@ -1,0 +1,30 @@
+.Layout-Menu {
+    display: flex;
+    height: 80px;
+    background-color: darkmagenta;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.Layout-Info {
+    display: flex;
+    height: 30%;
+    min-height: 150px;
+    background-color: brown;
+    width: 100%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.Layout-Main {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    color: white;
+    justify-content: center;
+}
