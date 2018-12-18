@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import Layout from "./components/Layout/Layout";
+import DeviceMonitoring from "./containers/DeviceMonitoring";
 import "./App.css";
 
+//TODO: Add routing to anothers pages
 class App extends Component {
   render() {
     return (
       <div className={"App"}>
-        <Layout>Conteúdo</Layout>
+        <DeviceMonitoring/>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-.Layout-Menu {
+.Layout-Footer {
     display: flex;
     height: 80px;
     background-color: darkmagenta;
@@ -8,6 +8,7 @@
     color: white;
     align-items: center;
     justify-content: center;
+    z-index: 100;
 }
 
 .Layout-Info {
