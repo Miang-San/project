@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DeviceMonitoring from "./containers/DeviceMonitoring";
+import DeviceMonitoring from "./containers/Device/DeviceMonitoring";
 import "./App.css";
 
 //TODO: Add routing to anothers pages

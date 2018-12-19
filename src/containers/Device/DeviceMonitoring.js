@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-import Auxiliary from "../hoc/Auxiliary/Auxiliary";
-import LayoutInfo from "../components/Layout/LayoutInfo";
-import LayoutMain from "../components/Layout/LayoutMain";
-import LayoutFooter from "../components/Layout/LayoutFooter";
-import Modal from "../components/UI/Modal";
-import Spinner from '../components/UI/Spinner'
+import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
+import LayoutInfo from "../../components/Layout/LayoutInfo";
+import LayoutMain from "../../components/Layout/LayoutMain";
+import LayoutFooter from "../../components/Layout/LayoutFooter";
+import DeviceModal from "./DeviceModal";
+import Spinner from "../../components/UI/Spinner";
 
 class DeviceMonitoring extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      showSpinner: false
     };
   }
 
   footerClicked() {
-    console.log(this.state.showModal);
     let prevState = this.state.showModal;
     this.setState({
       showModal: !prevState
@@ -25,8 +25,10 @@ class DeviceMonitoring extends Component {
   render() {
     return (
       <Auxiliary>
-        <Spinner/>
-        {this.state.showModal ? <Modal /> : null}
+        {this.state.showSpinner ? <Spinner /> : null}
+        {this.state.showModal ? (
+          <DeviceModal clicked={this.footerClicked.bind(this)} />
+        ) : null}
         <LayoutInfo>Informações</LayoutInfo>
         <LayoutMain>Conteúdo</LayoutMain>
         <LayoutFooter clicked={this.footerClicked.bind(this)}>
