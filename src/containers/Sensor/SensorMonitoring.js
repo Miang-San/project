@@ -3,11 +3,10 @@ import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
 import LayoutInfo from "../../components/Layout/LayoutInfo";
 import LayoutMain from "../../components/Layout/LayoutMain";
 import LayoutFooter from "../../components/Layout/LayoutFooter";
-import DeviceModal from "./DeviceModal";
+import DeviceModal from "./SensorModal";
 import Spinner from "../../components/UI/Spinner";
-import DeviceCard from "./DeviceCard";
 
-class DeviceMonitoring extends Component {
+class SensorMonitoring extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,15 +31,7 @@ class DeviceMonitoring extends Component {
           <DeviceModal clicked={this.footerClicked.bind(this)} />
         ) : null}
         <LayoutInfo>Informações</LayoutInfo>
-        <LayoutMain>
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard />
-          <DeviceCard />
-        </LayoutMain>
+        <LayoutMain>Sensores</LayoutMain>
         <LayoutFooter clicked={this.footerClicked.bind(this)}>
           Rodapé
         </LayoutFooter>
@@ -49,4 +40,4 @@ class DeviceMonitoring extends Component {
   }
 }
 
-export default DeviceMonitoring;
+export default SensorMonitoring;

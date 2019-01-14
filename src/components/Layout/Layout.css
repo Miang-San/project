@@ -24,6 +24,7 @@
 
 .Layout-Main {
   display: flex;
+  flex-flow: wrap;
   padding-top: 20px;
   padding-bottom: 80px;
   color: white;
